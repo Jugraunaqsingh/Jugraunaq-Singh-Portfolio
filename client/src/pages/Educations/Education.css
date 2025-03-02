@@ -1,0 +1,92 @@
+.education {
+  position:relative;
+  padding: 100px 0px;
+  margin: 50px 0px;
+  margin-left: 120px;
+  background-color: rgb(0, 0, 1);
+  /* box-shadow: rgba(23, 228, 228, 0.945) 1.95px 1.95px 2.6px;  */
+}
+
+#dark .education hr {
+  font-style: italic;
+  color: #7afcfc;
+  width: 400px;
+  margin: 10px auto;
+}
+
+.education h2 {
+  font-weight: bold;
+  color: #71fef7;
+}
+
+.education .vertical-timeline-element-title {
+  color: #64e4de;
+}
+
+
+.education .vertical-timeline-element-subtitle {
+  color: #1e1e2c;
+}
+
+/* ========= DARK MODE ============ */
+
+#dark .education {
+  padding: 100px 0px;
+  margin: 50px 0px;
+  margin-left: 120px;
+  background-color: rgb(0, 0, 1);
+  /* box-shadow: rgba(23, 228, 228, 0.945) 1.95px 1.95px 2.6px;  */
+  background-color: rgba(5, 0, 0, 0.095);
+}
+.sticker {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.5;
+  animation: float 6s ease-in-out infinite;
+  text-shadow: 0 0 8px rgb(108, 250, 250);
+}
+
+/* Random positions for each sticker */
+.sticker-edu-1 {
+  top: 10%;
+  left: 5%;
+}
+.sticker-edu-2 {
+  top: 40%;
+  right: 1%;
+}
+.sticker-edu-3 {
+  bottom: 20%;
+  left: 15%;
+}
+.sticker-edu-4 {
+  bottom: 10%;
+  right: 5%;
+}
+.sticker-edu-5 {
+  top: 20%;
+  left: 70%;
+}
+.sticker-edu-6 {
+  top: 50%;
+  left: 40%;
+}
+.sticker-edu-7 {
+  top: 50%;
+  left: 10%;
+}
+/* ========================== */
+@media (max-width: 600px) {
+  .education {
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+  }
+  .education h2 {
+    padding-top: 20px;
+  }
+  .education hr {
+    width: 280px;
+    margin-bottom: 10px;
+  }
+}

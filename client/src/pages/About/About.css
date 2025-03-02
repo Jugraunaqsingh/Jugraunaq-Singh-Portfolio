@@ -1,0 +1,219 @@
+/********************************
+  Main About Container
+*********************************/
+.about {
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 800px;
+  box-shadow: rgba(23, 228, 228, 0.945) 1.95px 1.95px 2.6px;
+}
+
+/* Optional global body styling */
+.body {
+  background-color: rgb(234, 236, 236);
+  color: azure;
+}
+
+/********************************
+  Left Column: Popout V-Shaped Image
+*********************************/
+.about-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Container for the image */
+.about-hex {
+  position: relative;
+  width: 280px;  /* Adjust width as needed */
+  height: 400px; /* Container height; taller to allow head pop-out */
+  margin: 0 auto;
+  overflow: visible; /* Allows the head to extend above the container */
+}
+
+/* The actual image with a V-shaped bottom edge */
+.about-hex img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;           /* Align the bottom of the image with the container */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  /* Clip the bottom to form a V shape: the top remains intact */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90%);
+}
+
+/* Pseudo-element to create a turquoise glow along the V-shaped bottom */
+.about-hex::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* Adjust height for desired glow intensity */
+  background: linear-gradient(to top, rgba(0, 10, 9, 0.8), transparent);
+  z-index: 3;
+  pointer-events: none;
+}
+
+/********************************
+  Right Column Content
+*********************************/
+.about-content p {
+  font-family: "Open Sans", sans-serif; /* A clean, professional font */
+  font-size: 1.1rem;                   /* Slightly larger text for readability */
+  line-height: 1.8;                    /* More generous line spacing */
+  text-align: justify;                 /* Evenly distribute text */
+  color: #333;
+  max-width: 100%;                     /* Allow text to stretch wider */
+  margin: 0 auto;                      /* Center if container is wider */
+  padding: 0 20px 20px 20px;
+}
+
+
+.about-content h1 {
+  font-family: cursive;
+  text-align: center;
+  margin-bottom: 10px;
+  color: rgb(9, 0, 0);
+  border-bottom: 2px solid rgb(5, 0, 0);
+  padding-bottom: 5px;
+}
+
+.about-subtitle {
+  font-size: 1.4rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.about-content p {
+  text-align: justify;
+  padding: 0 20px 20px 20px;
+  color: #333;
+}
+
+/* Button linking to #contact */
+.about-btn {
+  background-color: #67baf2;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.about-btn:hover {
+  background-color: #fff;
+  color: #67baf2;
+  border: 2px solid #67baf2;
+}
+
+/********************************
+  Dark Mode
+*********************************/
+#dark .about {
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+#dark .about-content h1 {
+  color: #76ecf9;
+  border-bottom: 2px solid #b0a4a4;
+}
+
+#dark .about-subtitle {
+  color: #77e3f8;
+}
+
+.about-content p {
+  font-family: "Open Sans", sans-serif; /* A clean, professional font */
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+  color: #fdf9f9;
+  max-width: 600px; /* Limit the width for optimal readability */
+  margin: 0 auto;   /* Center the text block */
+  padding: 0 20px 20px 20px;
+}
+.sticker-1 {
+  top: 5%;
+  left: 40%;
+}
+
+.sticker-2 {
+  top: 15%;
+  right: 5%;
+}
+
+.sticker-3 {
+  bottom: 20%;
+  left: 1%;
+}
+
+.sticker-4 {
+  top: -30%;
+  left: 80%;
+}
+
+.sticker-5 {
+  bottom: 15%;
+  right: 2%;
+}
+
+.sticker-6 {
+  top: 2%;
+  right: -20%;
+}
+
+.sticker-7 {
+  bottom: 130%;
+  left: 40%;
+}
+
+.sticker-8 {
+  top: 90%;
+  right: -20%;
+}
+
+.sticker-9 {
+  bottom: 30%;
+  left: 120%;
+}
+
+
+/********************************
+  Responsive Adjustments
+*********************************/
+@media (max-width: 600px) {
+  .about {
+    margin: 20px;
+    padding: 10px;
+    width: auto;
+  }
+  .about-content h1 {
+    margin-top: 10px;
+  }
+  .about-hex {
+    width: 240px;
+    height: 350px;
+  }
+  .about-hex::after {
+    height: 40px;
+  }
+  .about-hex img {
+    height: 370px;
+  }
+  .about-subtitle {
+    font-size: 1.2rem;
+  }
+  .about-content p {
+    padding: 10px;
+  }
+}

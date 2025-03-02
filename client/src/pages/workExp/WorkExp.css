@@ -1,0 +1,59 @@
+.work {
+  background-color: #1387812a;
+  margin-left: 140px;
+  /* box-shadow: rgba(23, 228, 228, 0.945) 1.95px 1.95px 2.6px; */
+
+}
+
+.work-exp {
+  padding: 60px 0px;
+}
+
+.work-exp h2 {
+  font-weight: bold;
+  color: #020210;
+}
+
+.work-exp hr {
+  color: #138781;
+  width: 400px;
+  margin: 10px auto;
+}
+
+.work-exp .vertical-timeline-element-title {
+  color: #53dcd5;
+}
+.vertical-timeline-element-date {
+  color: white !important;
+}
+
+
+.work-exp .vertical-timeline-element-subtitle {
+  color: #1e1e2c78;
+}
+
+/* ===== DARK MODE ========== */
+#dark .work {
+  background-color: #050006;
+}
+
+#dark .work-exp h2 {
+  color: rgb(127, 249, 249);
+}
+
+/* =================== */
+
+@media (max-width: 600px) {
+  .work {
+    margin: 0;
+    padding: 0;
+    margin-top: 50px;
+  }
+  .work hr {
+    width: 280px;
+  }
+  .vertical-timeline-element-date {
+    color: black !important;
+  }
+  
+}

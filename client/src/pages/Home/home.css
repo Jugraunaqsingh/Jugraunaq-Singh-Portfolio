@@ -1,0 +1,306 @@
+/********************************
+  Hero Section Grid
+*********************************/
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1.4fr 1.2fr;
+  min-height: 100vh;
+  width: 100%;
+  background: #000; /* Dark background by default */
+  color: #fff;
+  padding: 2rem;
+  box-sizing: border-box;
+  position: relative; /* For absolute positioning of stickers */
+}
+
+/* If you are using #dark / #light, define them in your global styles:
+#dark {
+  background-color: #000;
+  color: #fff;
+}
+#light {
+  background-color: #fff;
+  color: #000;
+}
+*/
+
+/* General Column Setup */
+.hero-left,
+.hero-center,
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.2rem;
+  position: relative; /* So child elements can be absolutely positioned */
+}
+
+/* ========== Left Column ========== */
+.hero-left h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #67baf2;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #fafafa;
+}
+
+.hero-desc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #fefbfb;
+  margin-bottom: 2rem;
+}
+
+/* New Decorative Blob on the Left */
+.decor-blob-left {
+  position: absolute;
+  top: 10%;
+  left: -60px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  opacity: 0.15;
+  z-index: 0; /* behind the text */
+  background: conic-gradient(
+    from 180deg,
+    #67baf2,
+    #000,
+    #67baf2
+  );
+  animation: spin2 10s linear infinite;
+}
+
+/* Extra animation for the blob */
+@keyframes spin2 {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ========== Center Column (Portrait) ========== */
+.hero-center {
+  align-items: center;
+}
+
+.portrait-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  z-index: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+
+/* Radial Fade on All Edges */
+.portrait-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+/* ========== Right Column ========== */
+.expert-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.typewriter-text {
+  font-size: 1.3rem;
+  color: #67dbf2;
+  margin-bottom: 1.5rem;
+}
+
+/* Decorative Circle on the Right */
+.decor-circle {
+  position: absolute;
+  top: 20%;
+  right: -3rem;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0.3;
+  background: conic-gradient(
+    from 180deg,
+    #67baf2,
+    #000,
+    #67baf2
+  );
+  animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ========== Buttons ========== */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #67d4f2;
+  color: #fff;
+  margin-bottom: 1rem;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #fff;
+  color: #67e9f2;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #fcfaf8;
+  border: 2px solid #f4f3f2;
+  text-align: center;
+}
+
+.btn-secondary:hover {
+  background-color: #67e9f2;
+  color: #000;
+}
+
+/********************************
+  Sticker Elements
+*********************************/
+.sticker {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.6;
+  animation: float 5s ease-in-out infinite;
+  z-index: 5;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+/* Unique positions for each sticker */
+.sticker-1 {
+  top: 5%;
+  left: 5%;
+}
+
+.sticker-2 {
+  top: 15%;
+  right: 15%;
+}
+
+.sticker-3 {
+  bottom: 20%;
+  left: 10%;
+}
+
+.sticker-4 {
+  top: 140%;
+  left: -90%;
+}
+
+.sticker-5 {
+  bottom: 15%;
+  right: 2%;
+}
+
+.sticker-6 {
+  top: 2%;
+  right: 35%;
+}
+
+.sticker-7 {
+  bottom: 5%;
+  left: 35%;
+}
+
+.sticker-8 {
+  top: 10%;
+  left: -40%;
+}
+
+.sticker-9 {
+  bottom: 30%;
+  left: 25%;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(0); }
+}
+
+/********************************
+  Responsive Breakpoints
+*********************************/
+/* Medium Screens */
+@media (max-width: 992px) {
+  .hero-left h1 {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+/* Small Screens */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr; /* Stack columns vertically */
+  }
+  .hero-center {
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+  }
+  .portrait-wrapper {
+    margin: 0 auto;
+  }
+  .decor-circle,
+  .decor-blob-left {
+    display: none; /* Hide the shapes on small screens to prevent overlap */
+  }
+}
+
+/* Extra-Small Screens */
+@media (max-width: 480px) {
+  .hero-left h1 {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  .typewriter-text {
+    font-size: 1.1rem;
+  }
+}

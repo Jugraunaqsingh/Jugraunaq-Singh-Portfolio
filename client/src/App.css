@@ -1,0 +1,20 @@
+/* app.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Light theme styles */
+  #light {
+    background-color: #fff;  /* Light background */
+    color: #000;             /* Dark text */
+  }
+  
+  /* Dark theme styles */
+  #dark {
+    background-color: #000;  /* Dark background */
+    color: #fff;             /* Light text */
+  }
+  
